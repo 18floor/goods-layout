@@ -1,38 +1,153 @@
-.App {
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.products {
+  max-width: 1440px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.icon-switch-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-switch {
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  box-shadow: 0px 7px 5px 0px #E1E6EA;
+}
+
+.card-name {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-color {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-price {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  color: rgb(211, 63, 52);
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-add-to-cart {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  background: transparent;
+  border: 1px solid rgb(211, 63, 52);
+  border-radius: 20px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: rgb(211, 63, 52);
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.item {
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  height: 100px;
+  margin-bottom: 5px;
+  background-color: rgb(245, 245, 245);
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.item-img {
+  height: 100%;
+  width: 20%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-img-pic {
+  height: auto;
+  width: 140px;
+  object-position: 0 -40px;
+}
+
+.item-name {
+  width: 20%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item-color {
+  width: 15%;
+  text-align: center;
+}
+
+.item-price {
+  width: 15%;
+  color: rgb(211, 63, 52);
+  font-weight: bold;
+}
+
+.item-add-to-cart {
+  height: 30px;
+  background: transparent;
+  border: 1px solid rgb(211, 63, 52);
+  border-radius: 20px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: rgb(211, 63, 52);
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.icon-switch {
+  color: #6a6a6a;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-switch:hover, .icon-switch:active {
+  color: #000000;
 }
